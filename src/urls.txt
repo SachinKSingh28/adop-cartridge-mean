@@ -1,1 +1,1 @@
-https://github.com/luebken/mean.git
+https://github.com/SachinKSingh28/mean.git
