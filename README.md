@@ -1,15 +1,13 @@
-# Cartridge Skeleton
-The purpose of this repository is to define a base cartridge with empty job definitions and pipelines to allow developers to rapidly develop their cartridges.
+# Mean Stack cartridge 
+The purpose of this repository is to help someone explore the [mean stack](https://github.com/meanjs/mean) and perform Continuous Delivery with it.
 
-## Stucture
-A cartridge is broken down into the following sections:
+## Structure
+This cartridge is broken down into the following sections:
 
- * infra
-  * For infrastructure-related items
  * jenkins
-  * For Jenkins-related items
+  * For Jenkins-related items for creating an environment and later CD of the app
  * src
-  * For source control-related items
+  * For source control-related items of the [mean stack](https://github.com/meanjs/mean)
 
 ## Metadata
 Each cartridge should contain a "metadata.cartridge" file that specifies the following metadata:
@@ -18,4 +16,6 @@ Each cartridge should contain a "metadata.cartridge" file that specifies the fol
   * This defines the version of the Cartridge SDK that the cartridge conforms to
  
 ## Using this Repository
-When developing a cartridge it is advisable to make a copy of this repository and remove all of the README.md files so that it serves as a basis for the new cartridge.
+Load it, run the job to create and environment and explore it in conjunction with this documentation [mean stack](https://github.com/meanjs/mean)
+
+
