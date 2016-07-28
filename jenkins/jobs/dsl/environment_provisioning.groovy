@@ -13,12 +13,9 @@ def listEnvironmentJob = freeStyleJob(projectFolderName + "/List_Environment")
 
 // Create Environment
 createEnvironmentJob.with{
-    description('''This job creates the environment to deploy the java application.
+    description('''This job creates the environment to deploy the mean https://github.com/meanjs/mean application.
 Note : If you running this job for the first time then please keep the environment name to default value.
 The reference application deploy job is expecting the default environment to be available.''')
-    parameters {
-        choiceParam('ENVIRONMENT_TYPE', ['DEV', 'PROD'], 'Create Environment for development(named: CI) or production (named: PRODA and PRODB)')
-    }
     label("docker")
     environmentVariables {
         env('WORKSPACE_NAME',workspaceFolderName)
@@ -57,9 +54,6 @@ queue(createEnvironmentJob)
 // Destroy Environment
 destroyEnvironmentJob.with{
     description("This job deletes the environment.")
-    parameters {
-        choiceParam('ENVIRONMENT_TYPE', ['DEV', 'PROD'], 'Destroy Environment for development(named: CI) or production (named: PRODA and PRODB)')
-    }
     label("docker")
     environmentVariables {
         env('WORKSPACE_NAME',workspaceFolderName)
